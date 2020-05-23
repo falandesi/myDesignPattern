@@ -1,7 +1,8 @@
 package factory.factorymethod.pizzastore.order;
 
-import factory.factorymethod.pizzastore.pizza.BJCheesePizza;
-import factory.factorymethod.pizzastore.pizza.BJPepperPizza;
+
+import factory.factorymethod.pizzastore.pizza.LDCheesePizza;
+import factory.factorymethod.pizzastore.pizza.LDPepperPizza;
 import factory.factorymethod.pizzastore.pizza.Pizza;
 
 public class LDOrderPizza extends OrderPizza {
@@ -9,9 +10,9 @@ public class LDOrderPizza extends OrderPizza {
     Pizza createPizza(String orderType) {
         Pizza pizza = null;
         if ("cheese".equals(orderType)) {
-            pizza = new BJCheesePizza();
+            pizza = new LDCheesePizza();
         } else if ("pepper".equals(orderType)) {
-            pizza = new BJPepperPizza();
+            pizza = new LDPepperPizza();
         }
 
         return pizza;
